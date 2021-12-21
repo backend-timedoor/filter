@@ -1,0 +1,23 @@
+{
+    "name": "timedoor/filter",
+    "description": "Query filter timedoor",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rizky Nur Hidayattulloh",
+            "email": "rizky@timedoor.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Timedoor\\Filter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Timedoor\\Filter\\FilterServiceProvider"
+            ]
+        }
+    }
+}
