@@ -6,10 +6,10 @@ use ReflectionClass;
 
 trait FilterTrait
 {
-	protected $request;
-
-	public function scopeFilter($query, $request)
+	public function scopeFilter($query, $request = null)
 	{
+		if (!$request) $request = request();
+
 		$filter = $this->getFilterClass($request);
 
 	    return $filter->apply($query);
