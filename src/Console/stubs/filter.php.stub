@@ -9,6 +9,6 @@ class DummyClass extends Filter
     public function keyword($value) // write your method name based on param name
     {
         // do query stuff here, 
-        // ex: return $this->query("name", "LIKE", "%$value%");
+        // ex: return $this->query->where("name", "LIKE", "%$value%");
     }
 }

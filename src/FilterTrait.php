@@ -17,6 +17,13 @@ trait FilterTrait
 
 	protected function getFilterClass($request)
 	{
+		return $this->filterClass 
+			? new $this->filterClass($request)
+			: new $this->defaultFilterClass($request);
+	}
+
+	protected function defaultFilterClass($request)
+	{
 		$reflect     = new ReflectionClass(get_class());
 		$class       = $reflect->getShortName() . config('filter.suffix');
 
