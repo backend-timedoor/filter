@@ -24,7 +24,7 @@ use Timedoor\Filter\FilterTrait;
 
 class Foo extends Model
 {
-	use  FilterTrait;
+    use FilterTrait;
 }
 ```
 
@@ -39,9 +39,9 @@ use App\Models\Foo;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class  AdminController  extends  Controller
+class AdminController extends Controller
 {
-	public  function  index(Request  $request)
+	public  function  index(Request $request)
 	{
 		$foo = Foo::filter($request)->get();
 	}
