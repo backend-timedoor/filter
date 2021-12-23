@@ -19,7 +19,7 @@ trait FilterTrait
 	{
 		return $this->filterClass 
 			? new $this->filterClass($request)
-			: new $this->defaultFilterClass($request);
+			: $this->defaultFilterClass($request);
 	}
 
 	protected function defaultFilterClass($request)
